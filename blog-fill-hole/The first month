@@ -1,0 +1,4 @@
+1、python中，不能把一个赋值表达式再赋值给一个变量
+    python是一种强类型的语言，变量可以不用声明就使用，赋值表达式的的类型不确定，可使用type函数测试
+2、变量名和方法名不能重名
+    尤其注意在使用装饰器设定getter和setter。可使用 variable(getter setter) _variable(属性)
