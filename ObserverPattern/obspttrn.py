@@ -1,76 +1,72 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
+__author__ = 'zxl'
 
-# 主题分成了人员管理数据管理两个类
-class Publisher:
+
+class Publisher(object):
     def __init__(self):
         self.observers = set()
 
     def add(self, observer):
-        if observer in self.observers:
-            print('add failed')
-        else:
-            self.observers.add(observer)
+        self.observers.add(observer)
 
     def remove(self, observer):
-        try:
-            self.observers.remove(observer)
-            # print('remove %s' % observer)
-        except ValueError:
-            print('Failed to remove:%s' % observer)
+        self.observers.remove(observer) if observer in self.observers \
+            else print('不存在此订阅者')
 
     def notify(self):
         [observer.update(self) for observer in self.observers]
 
-    def printobs(self):
-        for observer in self.observers:
-            print(observer)
 
-
-class DefaultPublisher(Publisher):
-    def __init__(self, subscriber):
+class PublisherData(Publisher):
+    def __init__(self, observer):
         Publisher.__init__(self)
-        self._subscriber = subscriber
-        self._newspaper = None
-        self._magazine = None
+        self.observer = observer
+        self._news = None
+        self._mag = None
 
     def __str__(self):
-        return '%s subscribe %s' % (self._subscriber, self._newspaper)
+        return '%s has subscribe newspaper:%s, magazine:%s' % (self.observer, self._news, self._mag)
 
     @property
     def newspaper(self):
-        return self._newspaper
+        return self._news
 
     @newspaper.setter
-    def newspaper(self, news):
-        self._newspaper = news
+    def newspaper(self, value):
+        self._news = value
         self.notify()
+
+    @newspaper.deleter
+    def newspaper(self):
+        self._news = None
 
     @property
-    def magazine(self):
-        return self._magazine
+    def magz(self):
+        return self._mag
 
-    @magazine.setter
-    def magazine(self, mag):
-        self._magazine = mag
+    @magz.setter
+    def magz(self, value):
+        self._mag = value
         self.notify()
 
+    @magz.deleter
+    def magz(self):
+        self._mag = None
 
-class Observer:
+
+class Observer(object):
     def update(self, publisher):
-        print('newspaper subscriber,%s'.format(publisher))
+        print(publisher)
 
 
 def main():
-    p = Publisher()
-    p.add('subscriber_a')
-    dp = DefaultPublisher('subscriber_a')
-    dp.newspaper = 'news'
-    print(dp)
-    p.printobs()
-
-    p.remove('subscriber_a')
-    p.printobs()
+    p1 = Publisher()
+    p1.add('tom')
+    pd = PublisherData('tom')
+    pd.newspaper = 'news_a'
+    pd.magz = 'mag_a'
+    print(pd)
 
 if __name__ == '__main__':
     main()
