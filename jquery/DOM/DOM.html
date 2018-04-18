@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mouseEvent</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="lib/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+<label for="">属性操作</label>
+<span id="attr_get">获取属性：</span>
+<span id="attr_modify">修改属性：</span>
+<span id="attr_remove">删除属性：</span>
+<div id="img_src"><img src="img/google.png" alt=""></div>
+<br/><br/><hr/><br/>
+
+<label for="">节点内容获取</label>
+<span id="node_html">html:</span>
+<span id="node_text">text:</span>
+<span id="node_val">val:</span>
+<div id="node_get">
+    <div id="get_html"><h5>get_html</h5></div>
+    <div id="get_text"><h5>get_text</h5></div>
+    <input type="text" id="get_val" value="get_val">
+</div>
+<br/><br/><hr/><br/>
+
+<label for="">设置</label>
+<span id="node_shtml">set html:</span>
+<span id="node_stext">set text:</span>
+<span id="node_sval">set val:</span>
+<br/> <br/>
+<div id="node_set">
+    <div id="set_text"><h5>set</h5></div>
+    <input type="text" id="set_html">
+</div>
+<br/><br/><hr/><br/>
+
+<label for="">文档操作</label>
+<span id="dom_add">追加[append]后面追加:</span>
+<span id="dom_pre_add">追加[append]前面追加:</span>
+<span id="dom_to_add">追加到[append]后面追加:</span>
+<span id="dom_preto_add">追加到[append]前面追加:</span>
+<br/><br/>
+<div id="dom_opt">
+    <ul>
+        <li>追加[append]后面追加</li>
+        <li>追加[append]前面追加</li>
+        <li>追加到[append]后面追加</li>
+        <li>追加到[append]前面追加</li>
+    </ul>
+</div>
+<br/><br/><hr/><br/>
+
+<label for="">after before insert_after insert_before</label>
+<span id="dom_after">追加[dom_after]后面追加:</span>
+<span id="dom_before">追加[dom_before]前面追加:</span>
+<span id="dom_insert_after">追加到[dom_insert_after]后面追加:</span>
+<span id="dom_insert_before">追加到[dom_insert_before]前面追加:</span>
+<br/><br/>
+<div id="dom_insert">
+    <ul>
+        <li>好好</li>
+        <li>学习</li>
+        <li>天天</li>
+        <li>向上</li>
+    </ul>
+</div>
+<br/><br/><hr/><br/>
+
+<label for="">wrap unwrap</label>
+<span id="dom_wrap">包裹[wrap]操作</span>
+<span id="dom_unwrap">去掉包裹[unwrap]操作</span>
+<br/><br/>
+<div id="wrap_unwrap">
+    <p>wrap</p>
+    <p>unwrap</p>
+    <p>?</p>
+</div>
+<br/><br/><hr/><br/>
+
+<label for="">文档处理</label>
+<span id="dom_empty">清空[empty]</span>
+<span id="dom_remove">删除[remove]</span>
+<span id="dom_clone">拷贝[clone]</span>
+<br/><br/>
+<div id="dom_erc">
+    <ul>
+        <li id="li_empty">empty</li>
+        <li id="li_remove">remove</li>
+        <li id="li_clone">clone</li>
+    </ul>
+</div>
+<br/><br/><hr/><hr/><br/>
+
+<label for="">css类操作</label>
+<span id="dom_addClass">新增class</span>
+<span id="dom_removeClass">删除class</span>
+<span id="dom_toggleClass">重复class</span>
+<br/><br/>
+<div id="dom_class">
+    展示区
+</div>
+<br/><br/><hr/><br/>
+
+<label for="">css普通操作</label>
+<span id="dom_css">普通css编辑[color]</span>
+<span id="dom_height">普通css编辑[height]</span>
+<br/><br/>
+<div id="dom_set">
+    css编辑区
+</div>
+</body>
+</html>

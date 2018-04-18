@@ -1,0 +1,22 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    text-align: center;
+}
+.main{
+    width: 1000px;
+    height: 300px;
+    margin: 0px auto;
+    background-color: gainsboro;
+}
+.button_t{
+    padding: 10px;
+}
+.button_t span{
+    margin: 0px 8px;
+    padding: 0px 10px;
+    border: 1px solid #888888;
+    cursor: pointer;
+}
