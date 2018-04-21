@@ -2,7 +2,7 @@ $(function () {
     $("#click1").click(function () {
         alert(1);
     });
-    //hover里面有两个函数参数，第一个是进入标签，第二个是离开标签
+    //hover里面有两个函数参数，第一个是进入，第二个是离开
     $("#hover1").hover(function () {
         alert("进入");
     },function () {
@@ -14,6 +14,7 @@ $(function () {
     $("#input1").focus(function () {
         alert("focus");
     });
+
     // 推荐
     $("#input3").keyup(function () {
         $("#target").text($(this.val()))

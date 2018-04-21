@@ -36,6 +36,6 @@ $(function () {
     });
     // animate
     $("#t_animate").click(function () {
-        $(".img2 img").animate({height:"100px",opacity:"0.2"},"2000");
+        $(".img2 img").animate({height:"100px",opacity:"0.2"},"6000");
     });
 });

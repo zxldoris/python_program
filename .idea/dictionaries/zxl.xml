@@ -6,7 +6,11 @@
       <w>bstart</w>
       <w>bvote</w>
       <w>cardflag</w>
+      <w>currentprinter</w>
       <w>cuword</w>
+      <w>ghostscript</w>
+      <w>gsprint</w>
+      <w>imagewriter</w>
       <w>newspapar</w>
       <w>pnum</w>
       <w>rootframe</w>

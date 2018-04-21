@@ -1,5 +1,5 @@
 from reportlab.pdfgen import canvas
-from reportlab.graphics.barcode import code128, code39, code93, usps
+from reportlab.graphics.barcode import code128, code39, code93, usps, ecc200datamatrix
 from reportlab.graphics.barcode import qr, usps4s
 from reportlab.graphics.shapes import Drawing
 from reportlab.graphics import renderPDF
@@ -55,17 +55,17 @@ if __name__ == '__main__':
         c.showPage()
         c.save()
 
-        GHOSTSCRIPT_PATH = "C:\\Program Files\\GHOSTSCRIPT\\bin\\gswin32.exe"
-        GSPRINT_PATH = "C:\\Program Files\\GSPRINT\\gsprint.exe"
-        loc = "D:\\python36\\python_program\\qrcodeGen"
+        GHOSTSCRIPT_PATH = "GHOSTSCRIPT\\bin\\gswin32.exe"
+        GSPRINT_PATH = "GSPRINT\\gsprint.exe"
+        loc = ".\\"  # 当前文件夹
         currentprinter = win32print.GetDefaultPrinter()
         x = 0
         for file in os.listdir(loc):
             if file.endswith('.pdf') and file != '':
-                print("if")
-                string = '-ghostscript "' + GHOSTSCRIPT_PATH + '" -printer "' + currentprinter + '" ' + file
+                string = '-ghostscript "' + GHOSTSCRIPT_PATH + \
+                         '" -printer "' + currentprinter + '" ' + file
                 win32api.ShellExecute(0, 'open', GSPRINT_PATH, string, '.', 0)
                 print('printing file >> ' + str(file))
                 x = x + 1
                 time.sleep(1)
-        os.remove(fname)
+                os.remove(fname)

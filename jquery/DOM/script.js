@@ -68,7 +68,7 @@ $(function () {
         $("#wrap_unwrap p").wrap("<div style='color:red;'></div>");
     });
     $("#dom_unwrap").click(function () {
-        $("#wrap_unwrap").unwrap("<div style='color:red;'></div>");
+        $("#wrap_unwrap p").unwrap();
     });
 
     //文档处理
