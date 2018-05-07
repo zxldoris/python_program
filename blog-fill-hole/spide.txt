@@ -1,0 +1,5 @@
+error£ºUnicodeDecodeError: 'ascii' codec can't decode byte 0xe7 in position 28: ordinal not in range(128)
+A:
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
